@@ -12,6 +12,9 @@ User = get_user_model()
 class Tag(models.Model):
     tag = models.CharField('Тег', max_length=20)
 
+    def __str__(self):
+        return self.tag
+
 
 class Birthday(models.Model):
     first_name = models.CharField('Имя', max_length=20)
